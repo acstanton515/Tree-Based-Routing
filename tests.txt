@@ -1,0 +1,23 @@
+
+Route Tests (invalid now, because second argument is an address)
+
+2 0 abc
+0 2 abc
+0 256 abc
+256 0 abc
+1 2 abc
+257 258 abc
+257 513 abc
+131584 65792 abc
+131330 65794 abc
+
+
+0 131330 abc
+0 131072 abc
+65792 131584 abc
+65537 66050 abc
+131073 131074 abc
+131073 131586 abc
+
+
+0 2.1.2.0/3 abc

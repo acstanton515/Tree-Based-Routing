@@ -1,0 +1,28 @@
+// Simple Scheduling Simulator (connection.h)
+// Jan 2013
+// Andrew Stanton
+
+#ifndef CONNECTION_H
+#define CONNECTION_H
+
+#include <string>
+
+
+class Connection
+{
+public:
+
+  
+  //non-const
+
+  
+  //const
+
+  
+private:
+  Node & m_node1;
+  Node & m_node2;
+  
+};
+
+#endif /* CONNECTION_H */

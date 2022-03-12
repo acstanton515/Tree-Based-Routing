@@ -1,0 +1,59 @@
+Tree Based Routing
+------------------------------------
+Algorithm One
+-----------------------------
+Nodes
+--------------------
+Root Node
+Branch Node (branch)
+Stem Node (stem)
+
+Mutually Exclusive or Potentially Inclusive
+
+Rules for Adding a Node:
+---------------
+If no children nodes, add a stem node, except if there are no more addresses in your stem, then add a branch node, unless you have no more branches, then don't add the node
+If you have a stem node, then add a branch node, unless you have no more branches, then don't add the node
+
+Rules for Adding a Stem Node:
+---------------
+There has to be another address available in the host byte.
+The new nodes address has to have the same other three bytes.
+The host byte does not change.
+
+
+Rules for Adding a Branch Node:
+---------------
+
+If your a stem node, then the host byte changes
+If your a branch node, then the host byte does not change
+
+
+
+Addresses
+--------------------
+Each 32 address bit has 4 bytes, where each byte is assigned the following property:
+
+Host Byte
+Branch Byte (optional)
+Care Byte (two or three care bytes per address)
+
+
+TBR Address Study
+
+32 Bit
+
+S = Subnet Length
+G = Groups (32 / Subnet Length)
+B = # Branches ( G - 1 ) [fixed subnets]
+H = # Host ( 2^S )
+N = # Networks (2^32 - 2^S )
+R = # Routers (Branch Nodes)
+A = # Addresses
+
+ S | G | B | H   | N    | R    | A    |
+ 8 | 4 | 3 | 256 | 2^24 | 2^24 | 2^32
+ 4 | 8 | 7 | 16  | 2^28 | 2^28 | 
+ 2 | 16| 15| 2   | 2^30 | 2^30 |
+
+

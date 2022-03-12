@@ -1,0 +1,17 @@
+#! /usr/bin/env python
+# encoding: utf-8
+
+top = '.' 
+out = 'bin' 
+APPNAME = 'sss'
+VERSION = '1.0'
+
+def configure(ctx): 
+        print('→ configuring the project in ' + ctx.path.abspath())
+
+def ping(ctx):
+        print('→ ping from ' + ctx.path.abspath())
+        ctx.recurse('src')
+
+def  hello (ctx):
+    print('hello my world')
